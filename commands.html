@@ -3,9 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
     <title>Commands</title>
 </head>
 <body>
+    <div class="header">
+        <img class="logo" src="./images/ubuntu.png" alt="">
+        <img class="logo" src="./images/linux.png" alt="">
+        <img class="logo" src="./images/wsl.png" alt="">
+    </div>
     
-</body>
+    <div class="container">
+        <h1>Comandos para actualizar e informacion</h1>
+        <table class="table" >
+            <tr>
+                <th>Comando</th>
+                <th>Descripcion</th>
+            </tr>
+            <tr>
+                <td class="command">sudo apt-get update</td>
+                <td>Actualiza el software de Ubuntu</td>
+            </tr>
+            <tr>
+                <td class="command">sudo apt-get upgrade</td>
+                <td>Actualiza el software de Ubuntu</td>
+            </tr>
+            <tr>
+                <td class="command">echo $0</td>
+                <td>Muestra que shell estas usando</td>
+            </tr>
+            <tr>
+                <td class="command">whoami</td>
+                <td>Muestra tu nombre de usuario </td>
+            </tr>
+            <tr>
+                <td class="command">clear or (ctrl+L)</td>
+                <td>Limpiar consola</td>
+            </tr>
+            <tr>
+                <td class="command">file [archivo]</td>
+                <td>Muestra informacion del archivo</td>
+            </tr>
+            <tr>
+                <td class="command">lsb_release -a</td>
+                <td>Muestra la version de Ubuntu</td>
+            </tr>
+            <tr>
+                <td class="command">histori</td>
+                <td>Muestra los comandos que se ha ejecutado</td>
+            </tr>
+            <tr>
+                <td class="command">pwd</td>
+                <td>Imprime la ruta en la que te encuentras</td>
+            </tr>
+            <tr>
+                <td class="command">
+                    uname +
+                    <ul>
+                        <li>-a</li>
+                        <li>-s (or) --kernel-name</li>
+                        <li>-r (or) --kernel-release</li>
+                        <li>-p (or) --processor</li>
+                        <li>-m (or) --machine</li>
+                        <li>-i (or) --hadware-platform</li>
+                        <li>-n (or) --nodename</li>
+                        <li>-o (or) --operateing-system</li>
+                    </ul>
+                </td>
+                <td>
+                    <p><span>-a</span> Muestra toda la informacion.</p>
+                    <p><span>-s (o) --kernel-name</span> Muestra el nombre del kernel(nucleo).</p>
+                    <p><span>-r (o) --kernel-release</span> Muestra version del kernel.</p>
+                    <p><span>-p (o) --processor</span> Muestra informacion del procesador.</p>
+                    <p><span>-m (o) --machine</span> Muestra arquitectura del procesador.</p>
+                    <p><span>-i (o) --hardware-platform</span> Muestra plataforma de hardware.</p>
+                    <p><span>-n (o) --nodename</span> Muestra nombre de red (maquina).</p>
+                    <p><span>-o (o) --operating-system</span> Muestra nombre de sistema operativo.</p>
+                </td>
+            </tr>
+        </table>
+
+        <!-- ----------------------------------------------------- -->
+        
+        <h1>Comandos para cambiar o manipular carpetas/archivos</h1>
+        <table class="table" >
+            <tr>
+                <th>Comando</th>
+                <th>Descripcion</th>
+            </tr>
+            <tr>
+                <td class="command">cd [carpeta]</td>
+                <td>Cambio de directorio, cd sin parametros lleva a Home</td>
+            </tr>
+            <tr>
+                <td class="command">cd ..</td>
+                <td>Salir de directorio</td>
+            </tr>
+            <tr>
+                <td class="command">cd ./folder1/folder2</td>
+                <td>Ir a un directorio o archivo especifico</td>
+            </tr>
+            <tr>
+                <td class="command">
+                    ls +
+                    <ul>
+                        <li>-l</li>
+                        <li>-a</li>
+                        <li>-h</li>
+                        <li>-S</li>
+                        <li>-r</li>
+                        <li>-t</li>
+                    </ul>
+                </td>
+                <td>
+                    <p><span>-l</span> Muestra archivos en lista.</p>
+                    <p><span>-a</span> Muestra archivos ocultos.</p>
+                    <p><span>-h</span> Muestra archivos en kb.</p>
+                    <p><span>-S</span> Muestra informacion del procesador.</p>
+                    <p><span>-r</span> Muestra archivos en forma recursiva.</p>
+                    <p><span>-t</span> Muestra archivos por fecha mas reciente.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="command">code .</td>
+                <td>Abre la carpeta donde te encuentras en VSCode </td>
+            </tr>
+            <tr>
+                <td class="command">
+                    tree +
+                    <ul>
+                        <li>-L 1,2 3 etc</li>
+                    </ul>
+                </td>
+                <td>
+                    <p><span>-L</span> Nivel.</p>
+                    <p><span>1, 2, 3 etc</span> Numero de nivel.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="command">mkdir [carpeta]</td>
+                <td>Crea una carpeta con el nombre que le des</td>
+            </tr>
+            <tr>
+                <td class="command">touch [carpeta]</td>
+                <td>Crea un archivo con el nombre y la extensión que le des</td>
+            </tr>
+            <tr>
+                <td class="command">mv [archivo/carpeta] [destino]</td>
+                <td>Renombra o Mueve una carpeta o archivo hacia un nuevo destino</td>
+            </tr>
+            <tr>
+                <td class="command">cp [archivo] [destino]</td>
+                <td>Copia un archivo hacia un nuevo destino</td>
+            </tr>
+            <tr>
+                <td class="command">
+                    rm +
+                    <ul>
+                        <li>-i</li>
+                        <li>-r</li>
+                        <li>-f</li>
+                    </ul>
+                </td>
+                <td>
+                    <p><span>-i</span> Muestra confirmacion antes de borrar archivo.</p>
+                    <p><span>-r</span> Para borrar folder vacio.</p>
+                    <p><span>-f</span> Para forzar a borrar.</p>
+                </td>
+            </tr>
+        </table>
+
+        <!-- ----------------------------------------------------- -->
+
+        <h1>Comandos para archivos de texto plano</h1>
+        <table class="table" >
+            <tr>
+                <th>Comando</th>
+                <th>Descripcion</th>
+            </tr>
+            <tr>
+                <td class="command">head [archivo]</td>
+                <td>Muestra las primeras 10 líneas de un archivo de texto</td>
+            </tr>
+            <tr>
+                <td class="command">head -n 20 [archivo]</td>
+                <td>Muestra las primeras 20 líneas</td>
+            </tr>
+            <tr>
+                <td class="command">tail [archivo]</td>
+                <td>Muestra las últimas 10 líneas</td>
+            </tr>
+            <tr>
+                <td class="command">tail -n 20 [archivo]</td>
+                <td>Muestra las últimas 20 líneas</td>
+            </tr>
+            <tr>
+                <td class="command">less [archivo]</td>
+                <td>Explora el contenido del archivo (y para salirte de este modo usas la Q)</td>
+            </tr>
+        </table>
+
+        <!-- ----------------------------------------------------- -->
+
+        <h1>Cowsay</h1>
+        <table class="table" >
+            <tr>
+                <th>Comando</th>
+                <th>Descripcion</th>
+            </tr>
+            <tr>
+                <td class="command">
+                    cowsay
+                    <ul>
+                        <li>[palabras]</li>
+                        <li>-f dragon-and-cow [palabras]</li>
+                        <li>-f</li>
+                    </ul>
+                </td>
+                <td>
+                    <p><span>-i</span> Muestra confirmacion antes de borrar archivo.</p>
+                    <p><span>-r</span> Para borrar folder vacio.</p>
+                    <p><span>-f</span> Para forzar a borrar.</p>
+                </td>
+            </tr>
+        </table>
+</body> 
+
 </html>
